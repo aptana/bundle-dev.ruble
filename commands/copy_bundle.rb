@@ -5,7 +5,9 @@ command "Grab Bundle" do |cmd|
   cmd.input = :none
   cmd.output = :show_as_tooltip
   cmd.invoke do |context|
+    # FIXME get dir depending on OS! This assumes Mac/Linux
     bundles_dir = File.expand_path("~/Documents/RadRails Bundles")
+    File.makedirs(bundles_dir)
     Dir.chdir(bundles_dir)  # Go to bundles root dir
     bundle_manager = RadRails::BundleManager.manager
     # Ask user which of the bundles to grab!
