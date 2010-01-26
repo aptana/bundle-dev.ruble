@@ -14,6 +14,11 @@ END
 
   # This command should show regardless of scope, so we don't define one.
   bundle.menu "Bundle Development" do |menu|
+    menu.command "Show Scope"
+    menu.command "Copy Scope"
+    menu.separator
+    menu.command "Show ENV"
+    menu.separator
     menu.command "Update"
   end
 end
