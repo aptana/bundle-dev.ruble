@@ -27,3 +27,34 @@ command '${1:name}' do |cmd|
   end
 end"  
 end
+
+command 'bundle' do |s|
+  s.trigger = 'bu'
+  s.scope = 'source.ruby'
+  s.input = :none
+  s.output = :insert_as_snippet
+  s.invoke do
+    org = ENV["TM_ORGANIZATION_NAME"] || 'Example.org'
+    full_name = ENV['TM_FULLNAME'] || ENV['USER'] || "John Doe"
+    user = ENV['USER'] || 'user'
+"require 'radrails'
+
+bundle '${1:Bundle name}' do |bundle|
+  bundle.author = '${2:#{full_name}}'
+  bundle.copyright = <<END
+(c) Copyright #{Time.now.year} ${3:#{org}}. Distributed under GPLv3 license.
+END
+
+  bundle.description = <<END
+${4:Example description}
+END
+
+  bundle.repository = 'git@github.com:${5:#{user}}/${6:repo-name}.git'
+
+  bundle.menu '${1:Bundle name}' do |menu|
+    #menu.command 'Command or snippet name'
+    #menu.separator
+  end
+end"
+  end
+end
