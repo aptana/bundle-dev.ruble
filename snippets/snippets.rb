@@ -1,3 +1,4 @@
+# Snippet to generate a snippet
 snippet 'snippet' do |s|
   s.trigger = 'sn'
   s.scope = 'source.ruby'
@@ -9,6 +10,32 @@ snippet 'snippet' do |s|
 end"
 end
 
+# Snippet to repeatedly insert menu command items
+snippet 'm.command' do |s|
+  s.trigger = 'm.'
+  s.scope = 'source.ruby'
+  s.expansion = "m.command '${1:command_or_snippet_name}'
+m.$0"
+end
+
+# Insert a menu separator
+snippet 'm.separator' do |s|
+  s.trigger = 'm.'
+  s.scope = 'source.ruby'
+  s.expansion = "m.separator
+m.$0"
+end
+
+# Generate a sub-menu
+snippet 'm.menu' do |s|
+  s.trigger = 'm.'
+  s.scope = 'source.ruby'
+  s.expansion = "m.menu '${1:submenu}' do |m|
+  m.$0
+end"
+end
+
+# Snippet to generate a command
 snippet 'command' do |s|
   s.trigger = 'co'
   s.scope = 'source.ruby'
@@ -28,6 +55,7 @@ command '${1:name}' do |cmd|
 end"  
 end
 
+# Snippet to generate a bundle
 command 'bundle' do |s|
   s.trigger = 'bu'
   s.scope = 'source.ruby'
@@ -51,9 +79,8 @@ END
 
   bundle.repository = 'git@github.com:${5:#{user}}/${6:repo-name}.git'
 
-  bundle.menu '${1:Bundle name}' do |menu|
-    #menu.command 'Command or snippet name'
-    #menu.separator
+  bundle.menu '${1:Bundle name}' do |m|
+    m.$0
   end
 end"
   end
