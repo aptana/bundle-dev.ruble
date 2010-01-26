@@ -19,6 +19,7 @@ END
     menu.separator
     menu.command "Show ENV"
     menu.separator
+    menu.command "Grab Bundle"
     menu.command "Update User Bundles"
   end
 end
