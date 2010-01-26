@@ -5,6 +5,7 @@ command "Update User Bundles" do |cmd|
   cmd.output = :show_as_tooltip
   cmd.invoke do
     str = ""
+    # FIXME get dir depending on OS! This assumes Mac/Linux
     bundles_dir = File.expand_path("~/Documents/RadRails Bundles")
     Dir.chdir(bundles_dir)  # Go to bundles root dir
     Dir.glob("*.ruble").each do |filename|
