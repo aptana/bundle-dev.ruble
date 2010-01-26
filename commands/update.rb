@@ -1,6 +1,6 @@
 require 'radrails'
 
-command "Update" do |cmd|
+command "Update User Bundles" do |cmd|
   cmd.input = :none
   cmd.output = :show_as_tooltip
   cmd.invoke do

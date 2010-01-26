@@ -19,7 +19,7 @@ END
     menu.separator
     menu.command "Show ENV"
     menu.separator
-    menu.command "Update"
+    menu.command "Update User Bundles"
   end
 end
 
