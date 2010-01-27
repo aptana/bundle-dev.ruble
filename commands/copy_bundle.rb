@@ -6,11 +6,9 @@ command "Grab Bundle" do |cmd|
   cmd.output = :show_as_tooltip
   cmd.invoke do |context|
     bundle_manager = RadRails::BundleManager.manager
-    bundles_dir = bundle_manager.getApplicationBundlesPath
-    File.makedirs(bundles_dir)
-    Dir.chdir(bundles_dir)  # Go to bundles root dir
+    bundles_dir = bundle_manager.getUserBundlesPath
 
-    # Ask user which of the bundles to grab!
+    # Ask user which of the pre-installed bundles to grab!
     options = {}
     options[:items] = bundle_manager.application_bundles.map {|bundle| bundle.display_name }
     chosen = RadRails::UI.request_item(options)
@@ -23,6 +21,8 @@ command "Grab Bundle" do |cmd|
     dir_name = bundle.display_name.gsub(/[\s\-]+/, '_') + ".ruble"
     # TODO determine git/svn by looking at the URL?
     str = ""
+    File.makedirs(bundles_dir)
+    Dir.chdir(bundles_dir)  # Go to bundles root dir
     IO.popen("git clone #{repo_url} #{dir_name}", 'r') {|io| str << io.read } # FIXME check exit value?
     str
   end

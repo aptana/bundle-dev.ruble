@@ -7,7 +7,7 @@ command "Update User Bundles" do |cmd|
     str = ""
     
     bundle_manager = RadRails::BundleManager.manager
-    bundles_dir = bundle_manager.getApplicationBundlesPath
+    bundles_dir = bundle_manager.getUserBundlesPath
     Dir.chdir(bundles_dir)  # Go to bundles root dir
     Dir.glob("*.ruble").each do |filename|
       bundle_dir = File.join(bundles_dir, filename)
