@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 command 'Show ENV' do |cmd|
   cmd.input = :none

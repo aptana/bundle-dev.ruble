@@ -1,20 +1,20 @@
-require 'radrails'
-require 'radrails/ui'
+require 'ruble'
 
 command "Grab Bundle" do |cmd|
   cmd.input = :none
   cmd.output = :show_as_tooltip
   cmd.invoke do |context|
-    bundle_manager = RadRails::BundleManager.manager
+    bundle_manager = Ruble::BundleManager.manager
     bundles_dir = bundle_manager.getUserBundlesPath
 
     # Ask user which of the pre-installed bundles to grab!
     options = {}
     options[:items] = bundle_manager.application_bundles.map {|bundle| bundle.display_name }
-    chosen = RadRails::UI.request_item(options)
+    chosen = Ruble::UI.request_item(options)
     context.exit_show_tooltip("No bundles to select from") if chosen.nil?
       
     bundle = bundle_manager.application_bundles.select {|bundle| bundle.display_name == chosen}.first
+    context.exit_discard if bundle.nil?
     repo_url = bundle.repository
     context.exit_show_tooltip("Selected bundle has no repository URL defined") if repo_url.nil?
       

@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 command "Update User Bundles" do |cmd|
   cmd.input = :none
@@ -6,7 +6,7 @@ command "Update User Bundles" do |cmd|
   cmd.invoke do
     str = ""
     
-    bundle_manager = RadRails::BundleManager.manager
+    bundle_manager = Ruble::BundleManager.manager
     bundles_dir = bundle_manager.getUserBundlesPath
     Dir.chdir(bundles_dir)  # Go to bundles root dir
     Dir.glob("*.ruble").each do |filename|

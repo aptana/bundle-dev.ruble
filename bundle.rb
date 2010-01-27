@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 bundle 'Bundle Development' do |bundle|
   bundle.author = "Christopher Williams, Andrew Shebanow"

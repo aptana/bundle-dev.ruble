@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 command "Copy Scope" do |cmd|
   cmd.key_binding = "CONTROL+SHIFT+COMMAND+C"
