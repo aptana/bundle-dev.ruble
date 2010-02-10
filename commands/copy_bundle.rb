@@ -21,17 +21,22 @@ command "Grab Bundle" do |cmd|
     bundle = app_bundles.select {|bundle| bundle.display_name == chosen}.first
     context.exit_discard if bundle.nil?
       
-    repo_url = bundle.repository      
-    dir_name = bundle.display_name.gsub(/[\s\-]+/, '_').downcase + ".ruble"
-    bundles_dir = bundle_manager.getUserBundlesPath
+    repo_url = bundle.repository
+    dir_name = bundle.bundle_directory.name
+    bundles_dir = bundle_manager.user_bundles_path
     FileUtils.makedirs(bundles_dir)
     Dir.chdir(bundles_dir)  # Go to bundles root dir
-    # TODO determine git/svn by looking at the URL?
-    str = ""
-    IO.popen("git clone #{repo_url} #{dir_name}", 'r') {|io| str << io.read }
-    # Also generate a project for the bundle and add it in the workspace?
-    proj = Ruble::Project.create(bundle.display_name, :location => File.join(bundles_dir, dir_name))
-    proj.open
-    str
+    # If directory already exists, we should punt
+    if File.exists?(dir_name)
+      "Directory already exists, did not grab bundle"
+    else        
+      str = ""
+      # TODO determine git/svn by looking at the URL?
+      IO.popen("git clone #{repo_url} #{dir_name}", 'r') {|io| str << io.read }
+      # Also generate a project for the bundle and add it in the workspace?
+      proj = Ruble::Project.create(bundle.display_name, :location => File.join(bundles_dir, dir_name))
+      proj.open
+      str
+    end
   end
 end
