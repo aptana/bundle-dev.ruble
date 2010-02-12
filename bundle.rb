@@ -2,9 +2,9 @@ require 'ruble'
 
 bundle 'Bundle Development' do |bundle|
   bundle.author = "Christopher Williams, Andrew Shebanow"
-  bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under GPLv3 and Aptana Source license."
+  bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under the MIT license."
   bundle.description = "A quick and dirty bundle to make it easier to update your other bundles. Won't work on Windows unless you use cygwin"
-  bundle.repository = "git@github.com:aptana/bundle-dev.ruble.git"
+  bundle.repository = "git://github.com/aptana/bundle-dev.ruble.git"
 
   # This command should show regardless of scope, so we don't define one.
   bundle.menu "Bundle Development" do |menu|
