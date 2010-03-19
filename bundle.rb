@@ -1,8 +1,9 @@
 require 'ruble'
 
-bundle 'Bundle Development' do |bundle|
+bundle do |bundle|
   bundle.author = "Christopher Williams, Andrew Shebanow"
   bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under the MIT license."
+  bundle.display_name = 'Bundle Development'
   bundle.description = "A quick and dirty bundle to make it easier to update your other bundles. Won't work on Windows unless you use cygwin"
   bundle.repository = "git://github.com/aptana/bundle-dev.ruble.git"
 
