@@ -1,3 +1,5 @@
+require 'ruble'
+
 # Snippet to generate a snippet
 snippet 'snippet' do |s|
   s.trigger = 'sn'
