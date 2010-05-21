@@ -2,8 +2,8 @@ require 'ruble'
 require 'ruble/project'
 require 'fileutils'
 
+# HEY! Want your Ruble included here? Send us a pull request on github!
 RubleInfo = Struct.new(:display_name, :directory_name, :repository)
-
 INSTALLABLE_RUBLES = [
   RubleInfo.new("GitHub",        "github",       "git://github.com/aptana/github.ruble.git"),
   RubleInfo.new("Shell Script",  "shell-script", "git://github.com/aptana/shell-script.ruble.git"),
