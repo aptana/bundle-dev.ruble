@@ -17,6 +17,7 @@ bundle do |bundle|
     menu.command "Install Bundle"
     menu.command "Edit Bundle"
     menu.command "Update User Bundles"
+    menu.command "Convert Textmate Bundle"
   end
   
 end
