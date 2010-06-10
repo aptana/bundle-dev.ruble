@@ -13,7 +13,7 @@ INSTALLABLE_RUBLES = [
 # This asks the user which of the known bundles they would like to install
 command "Install Bundle" do |cmd|
   cmd.input = :none
-  cmd.output = :show_as_tooltip
+  cmd.output = :none
   cmd.invoke do |context|
     # Ask user which of the pre-installed bundles to grab!
     bundles_dir = Ruble::BundleManager.manager.user_bundles_path
@@ -37,26 +37,23 @@ command "Install Bundle" do |cmd|
       options[:title] = "Select Bundle to Install"
       chosen = Ruble::UI.request_item(options)
     end
-    context.exit_show_tooltip("No bundle selected") if chosen.nil?
+    context.exit_discard if chosen.nil?
       
     ruble_info = INSTALLABLE_RUBLES.select {|ruble_info| ruble_info.display_name == chosen}.first
-    context.exit_discard if ruble_info.nil?
-      
-    FileUtils.makedirs(bundles_dir)
-    
-    Dir.chdir(bundles_dir)
-    # If Ruble already exists, we should punt
-    if File.exists?(ruble_info.directory_name)
-      "Directory already exists, did not grab bundle"
-    else        
-      str = ""
-      # TODO determine git/svn by looking at the URL?
-      IO.popen("git clone #{ruble_info.repository} #{ruble_info.directory_name}", 'r') {|io| str << io.read }
-      # Also generate a project for the bundle and add it in the workspace?
-      proj = Ruble::Project.create( ruble_info.display_name,
-                                    :location => File.join(bundles_dir, ruble_info.directory_name))
-      proj.open
-      str
+    if ruble_info.nil?
+      Ruble::UI.alert(:info, "No bundles available","There are no bundles to install.")
+      context.exit_discard 
     end
+    
+    # TODO determine git/svn by looking at the URL?
+    
+    # IO.popen("git clone #{ruble_info.repository} #{ruble_info.directory_name}", 'r') {|io| str << io.read }
+    Ruble::Terminal.open("git clone #{ruble_info.repository}", bundles_dir)
+  
+    # Also generate a project for the bundle and add it in the workspace?
+    # proj = Ruble::Project.create( ruble_info.display_name,
+                                  # :location => File.join(bundles_dir, ruble_info.directory_name))
+    # proj.open
+    
   end
 end
