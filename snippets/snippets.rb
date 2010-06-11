@@ -42,7 +42,7 @@ snippet 'command' do |s|
   s.trigger = 'co'
   s.scope = 'source.ruby'
   s.expansion = 
-"require 'radrails'
+"require 'ruble'
 
 command '${1:name}' do |cmd|
   cmd.input = :${2:none/document/selection/word/right_character/left_character/line/clipboard/selected_lines}
@@ -67,7 +67,7 @@ command 'bundle' do |s|
     org = ENV["TM_ORGANIZATION_NAME"] || 'Example.org'
     full_name = ENV['TM_FULLNAME'] || ENV['USER'] || "John Doe"
     user = ENV['USER'] || 'user'
-"require 'radrails'
+"require 'ruble'
 
 bundle '${1:Bundle name}' do |bundle|
   bundle.author = '${2:#{full_name}}'
@@ -86,4 +86,24 @@ END
   end
 end"
   end
+end
+
+# Snippet to generate a content assistant
+snippet 'content_assist' do |s|
+  s.trigger = 'ca'
+  s.scope = 'source.ruby'
+  s.expansion = 
+"require 'ruble'
+
+content_assist '${1:name}' do |ca|
+  ca.scope = '${2:source.ruby}'
+  ca.invoke do |context|
+    # Write your ruby code here. If there's a non-nil return value for the block that will be used as output/result value.
+    # Otherwise we'll take what was piped to STDOUT
+    
+    # Content Assist is a little odd, it assumes the return value is a string that can be eval'd to an 
+    # Array of strings or hashes that are the list of completion proposals.
+    [${3:'example', 'values'}].inspect
+  end
+end"  
 end
