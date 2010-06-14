@@ -33,17 +33,15 @@ command "Install Bundle" do |cmd|
       options[:title] = "Install Bundle"
       options[:prompt] = "Install #{items.first} Bundle?"
       Ruble::UI.request_confirmation(options) ? chosen = items.first : chosen = nil
+    elsif items.length == 0
+      context.exit_show_tool_tip("There are no bundles to install.")
     else
       options[:title] = "Select Bundle to Install"
       chosen = Ruble::UI.request_item(options)
     end
-    context.exit_discard if chosen.nil?
+    context.exit_show_tool_tip("No Bundle selected") if chosen.nil?
       
     ruble_info = INSTALLABLE_RUBLES.select {|ruble_info| ruble_info.display_name == chosen}.first
-    if ruble_info.nil?
-      Ruble::UI.alert(:info, "No bundles available","There are no bundles to install.")
-      context.exit_discard 
-    end
     
     # TODO determine git/svn by looking at the URL?
     
