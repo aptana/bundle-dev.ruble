@@ -1,4 +1,5 @@
 require 'ruble'
+require 'ruble/platform'
 
 bundle do |bundle|
   bundle.author = "Christopher Williams, Andrew Shebanow"
@@ -17,7 +18,7 @@ bundle do |bundle|
     menu.command "Install Bundle"
     menu.command "Edit Bundle"
     menu.command "Update User Bundles"
-    menu.command "Convert Textmate Bundle"
+    menu.command "Convert Textmate Bundle" if Ruble.is_mac?
   end
   
 end
