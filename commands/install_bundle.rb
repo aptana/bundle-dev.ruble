@@ -5,6 +5,7 @@ require 'fileutils'
 # HEY! Want your Ruble included here? Send us a pull request on github!
 RubleInfo = Struct.new(:display_name, :directory_name, :repository)
 INSTALLABLE_RUBLES = [
+  RubleInfo.new("CSScaffold",    "Scaffold.ruble",     "http://github.com/brianegan/Scaffold.ruble.git"),
   RubleInfo.new("GitHub",        "github.ruble",       "git://github.com/aptana/github.ruble.git"),
   RubleInfo.new("Shell Script",  "shell-script.ruble", "git://github.com/aptana/shell-script.ruble.git"),
   RubleInfo.new("WebFont",       "WebFont.ruble",      "git://github.com/aptana/WebFont.ruble.git")
