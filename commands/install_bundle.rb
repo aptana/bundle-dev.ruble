@@ -9,7 +9,7 @@ INSTALLABLE_RUBLES = [
   RubleInfo.new("GitHub",        "github.ruble",       "git://github.com/aptana/github.ruble.git"),
   RubleInfo.new("Shell Script",  "shell-script.ruble", "git://github.com/aptana/shell-script.ruble.git"),
   RubleInfo.new("WebFont",       "WebFont.ruble",      "git://github.com/aptana/WebFont.ruble.git"),
-  RubleInfo.new("Wordpress",     "Wordpress.ruble",    "git://github.com/aptana/Wordpress.ruble.git"),
+  RubleInfo.new("Wordpress",     "Wordpress.ruble",    "git://github.com/aptana/wordpress.ruble.git"),
   RubleInfo.new("Mercurial",     "mercurial.ruble",    "git://github.com/aptana/mercurial.ruble.git")
 ]
 
