@@ -10,7 +10,8 @@ INSTALLABLE_RUBLES = [
   RubleInfo.new("Shell Script",  "shell-script.ruble", "git://github.com/aptana/shell-script.ruble.git"),
   RubleInfo.new("WebFont",       "WebFont.ruble",      "git://github.com/aptana/WebFont.ruble.git"),
   RubleInfo.new("Wordpress",     "Wordpress.ruble",    "git://github.com/aptana/wordpress.ruble.git"),
-  RubleInfo.new("Mercurial",     "mercurial.ruble",    "git://github.com/aptana/mercurial.ruble.git")
+  RubleInfo.new("Mercurial",     "mercurial.ruble",    "git://github.com/aptana/mercurial.ruble.git"),
+  RubleInfo.new("RSense",        "rsense.ruble",       "git://github.com/aptana/rsense.ruble.git")
 ]
 
 # This asks the user which of the known bundles they would like to install
