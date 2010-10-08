@@ -1,6 +1,5 @@
 require 'ruble'
 require 'ruble/project'
-require 'fileutils'
 
 # HEY! Want your Ruble included here? Send us a pull request on github!
 RubleInfo = Struct.new(:display_name, :directory_name, :repository)

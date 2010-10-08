@@ -1,6 +1,5 @@
 require 'ruble'
 require 'ruble/project'
-require 'fileutils'
 
 # This asks the user which of the pre-installed bundles with a known repository they'd liek to grab.
 # This will then do a git clone of the bundle and create a project for this copy.
@@ -24,6 +23,9 @@ command "Grab Bundle" do |cmd|
     repo_url = bundle.repository
     dir_name = bundle.bundle_directory.name
     bundles_dir = bundle_manager.user_bundles_path
+    
+    require 'fileutils'
+    
     FileUtils.makedirs(bundles_dir)
     Dir.chdir(bundles_dir)  # Go to bundles root dir
     # If directory already exists, we should punt
