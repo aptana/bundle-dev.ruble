@@ -68,7 +68,7 @@ command 'bundle' do |s|
 bundle '${1:Bundle name}' do |bundle|
   bundle.author = '${2:#{full_name}}'
   bundle.copyright = <<END
-(c) Copyright #{Time.now.year} ${3:#{org}}. Distributed under GPLv3 license.
+(c) Copyright #{Time.now.year} ${3:#{org}}. Distributed under MIT license.
 END
 
   bundle.description = <<END
@@ -100,6 +100,15 @@ content_assist '${1:name}' do |ca|
     # Array of strings or hashes that are the list of completion proposals.
     [${3:'example', 'values'}].inspect
   end
+end"  
+end
+
+# Snippet to generate with_defaults
+snippet 'with_defaults' do |s|
+  s.trigger = 'wi'
+  s.expansion = 
+"with_defaults :${1:scope} => '${2:source.ruby}' do
+  $0
 end"  
 end
 end
