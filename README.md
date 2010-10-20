@@ -4,15 +4,15 @@ A quick and dirty bundle to make it easier to update your other bundles. Ported 
 
 ## Authors
 
-* Textmate Contributors
+* TextMate Contributors
 * Modifications by Aptana
 
 ## License
 
-This bundle is licensed under the Textmate license, available here:
+This bundle is licensed under the TextMate license, available here:
 
-* [Textmate license](http://svn.textmate.org/trunk/LICENSE)
+* [TextMate license](http://svn.textmate.org/trunk/LICENSE)
 
-## Other Stuff
+## Bugs/Requests
 
 * You can [report a bug or request a feature here](http://github.com/aptana/bundle-dev.ruble/issues)
