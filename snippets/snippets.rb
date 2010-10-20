@@ -111,4 +111,17 @@ snippet 'with_defaults' do |s|
   $0
 end"  
 end
+
+snippet 'env' do |s|
+  s.trigger = 'env'
+  s.expansion=
+"env '${1:source.ruby}' do |e|
+  e['${2:TM_COMMENT_START}'] = '${3:# }'
+end"
+end
+
+  snippet 'smart_typing_pairs' do |s|
+    s.trigger = 'stp'
+    s.expansion = "smart_typing_pairs['${1:source.ruby}'] = ['${2:\"}', '$2']"
+  end
 end
