@@ -16,7 +16,6 @@ bundle do |bundle|
     menu.command "Show ENV"
     menu.separator
     menu.command "Install Bundle"
-    menu.command "Edit Bundle"
     menu.command "Update User Bundles"
     menu.command "Convert Textmate Bundle" if Ruble.is_mac?
     menu.separator
