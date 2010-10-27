@@ -13,6 +13,7 @@ command "Update User Bundles" do |cmd|
       bundle_dir = File.join(bundles_dir, filename)
       bundle_dir = File.readlink(bundle_dir) if File.symlink?(bundle_dir)
       Dir.chdir(bundle_dir) do |dir|
+        str << dir.to_s; str << ": "
         IO.popen("git pull", 'r') {|io| str << io.read } if File.exists?(File.join(dir, ".git"))
         IO.popen("svn update", 'r') {|io| str << io.read } if File.exists?(File.join(dir, ".svn"))
       end
