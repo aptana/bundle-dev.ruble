@@ -7,6 +7,7 @@ if Ruble.is_mac?
     cmd.input = :none
     cmd.output = :show_as_tooltip
     cmd.invoke do |context|
+      require 'fileutils'
       # Find where rubles are stored
       bundles_dir = Ruble::BundleManager.manager.user_bundles_path
       FileUtils.makedirs(bundles_dir)
