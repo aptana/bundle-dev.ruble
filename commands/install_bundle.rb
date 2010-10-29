@@ -12,6 +12,8 @@ INSTALLABLE_RUBLES = [
   RubleInfo.new("Wordpress",     "Wordpress.ruble",           "git://github.com/aptana/wordpress.ruble.git"),
   RubleInfo.new("Mercurial",     "mercurial.ruble",           "git://github.com/aptana/mercurial.ruble.git"),
   RubleInfo.new("RSense",        "rsense.ruble",              "git://github.com/aptana/rsense.ruble.git")
+  RubleInfo.new("Boxee",         "boxee.ruble",               "git://github.com/sgtcoolguy/boxee.ruble.git"),
+  RubleInfo.new("Bundler",       "bundler.ruble",             "git://github.com/aptana/bundler.ruble.git")
 ]
 
 # This asks the user which of the known bundles they would like to install
