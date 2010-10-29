@@ -11,7 +11,7 @@ INSTALLABLE_RUBLES = [
   RubleInfo.new("WebFont",       "WebFont.ruble",             "git://github.com/aptana/WebFont.ruble.git"),
   RubleInfo.new("Wordpress",     "Wordpress.ruble",           "git://github.com/aptana/wordpress.ruble.git"),
   RubleInfo.new("Mercurial",     "mercurial.ruble",           "git://github.com/aptana/mercurial.ruble.git"),
-  RubleInfo.new("RSense",        "rsense.ruble",              "git://github.com/aptana/rsense.ruble.git")
+  RubleInfo.new("RSense",        "rsense.ruble",              "git://github.com/aptana/rsense.ruble.git"),
   RubleInfo.new("Boxee",         "boxee.ruble",               "git://github.com/sgtcoolguy/boxee.ruble.git"),
   RubleInfo.new("Bundler",       "bundler.ruble",             "git://github.com/aptana/bundler.ruble.git")
 ]
