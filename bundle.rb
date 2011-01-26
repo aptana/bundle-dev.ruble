@@ -18,6 +18,7 @@ bundle do |bundle|
     menu.command "Install Bundle"
     menu.command "Update User Bundles"
     menu.command "Convert TextMate Bundle" if Ruble.is_mac?
+    menu.command "Flush Bundle Caches"
     menu.separator
     menu.command "Show Command Bindings"
     menu.command "Show Active Commands in Scope"
