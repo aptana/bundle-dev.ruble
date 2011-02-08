@@ -86,26 +86,63 @@ children:
   displayName: Bundle Development
   path: bundle.rb
   scope: null
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Show Active Commands in Scope, inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: create_new_document, path: commands/active_scope_commands.rb,
-  runType: current_thread, scope: null, workingDirectoryType: UNDEFINED}
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Show Active Snippets in Scope, inputPath: null, keyBindingMap: null,
-  outputPath: null, outputType: create_new_document, path: commands/active_scope_snippets.rb,
-  runType: current_thread, scope: null, workingDirectoryType: UNDEFINED}
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Show Command Bindings, inputPath: null, keyBindingMap: null, outputPath: null,
-  outputType: create_new_document, path: commands/command_bindings.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Convert TextMate Bundle, inputPath: null, keyBindingMap: null, outputPath: null,
-  outputType: show_as_tooltip, path: commands/convert_bundle.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Show Active Commands in Scope
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: create_new_document
+  path: commands/active_scope_commands.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Show Active Snippets in Scope
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: create_new_document
+  path: commands/active_scope_snippets.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Show Command Bindings
+  input: []
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: create_new_document
+  path: commands/command_bindings.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Convert TextMate Bundle
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: show_as_tooltip
+  path: commands/convert_bundle.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Copy Scope
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+COMMAND+C]
@@ -119,6 +156,7 @@ children:
   async: false
   customProperties: null
   displayName: Show ENV
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+E]
@@ -128,18 +166,37 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Flush Bundle Caches, inputPath: null, keyBindingMap: null, outputPath: null,
-  outputType: show_as_tooltip, path: commands/flush_cache.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Install Bundle, inputPath: null, keyBindingMap: null, outputPath: null,
-  outputType: undefined, path: commands/install_bundle.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Flush Bundle Caches
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: show_as_tooltip
+  path: commands/flush_cache.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Install Bundle
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: undefined
+  path: commands/install_bundle.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
   displayName: Show Scope
+  input: [none]
   inputPath: null
   keyBindingMap:
     !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+P]
@@ -149,10 +206,19 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement {async: false, customProperties: null,
-  displayName: Update User Bundles, inputPath: null, keyBindingMap: null, outputPath: null,
-  outputType: show_as_tooltip, path: commands/update.rb, runType: current_thread,
-  scope: null, workingDirectoryType: UNDEFINED}
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Update User Bundles
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: show_as_tooltip
+  path: commands/update.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.SnippetElement
   async: false
   customProperties:
@@ -160,6 +226,7 @@ children:
   displayName: snippet
   expansion: "snippet '${1:name}' do |s|\n  s.trigger = '${2:trigger}'\n  s.scope\
     \ = '${3:source.ruby}'\n  s.expansion = \"${4:example}\"\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -176,6 +243,7 @@ children:
   expansion: 'm.command ''${1:command_or_snippet_name}''
 
     m.$0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -192,6 +260,7 @@ children:
   expansion: 'm.separator
 
     m.$0'
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -206,6 +275,7 @@ children:
     prefix_values: [m.]
   displayName: m.menu
   expansion: "m.menu '${1:submenu}' do |m|\n  m.$0\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -225,6 +295,7 @@ children:
     \  cmd.invoke do |context|\n    # Write your ruby code here. If there's a non-nil\
     \ return value for the block that will be used as output/result value.\n    #\
     \ Otherwise we'll take what was piped to STDOUT\n    nil\n  end\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -238,6 +309,7 @@ children:
   customProperties:
     prefix_values: [bu]
   displayName: bundle
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -258,6 +330,7 @@ children:
     \ Assist is a little odd, it assumes the return value is a string that can be\
     \ eval'd to an \n    # Array of strings or hashes that are the list of completion\
     \ proposals.\n    [${3:'example', 'values'}].inspect\n  end\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -272,6 +345,7 @@ children:
     prefix_values: [wi]
   displayName: with_defaults
   expansion: "with_defaults :${1:scope} => '${2:source.ruby}' do\n  $0\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -287,6 +361,7 @@ children:
   displayName: env
   expansion: "env '${1:source.ruby}' do |e|\n  e['${2:TM_COMMENT_START}'] = '${3:#\
     \ }'\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -301,6 +376,7 @@ children:
     prefix_values: [stp]
   displayName: smart_typing_pairs
   expansion: smart_typing_pairs['${1:source.ruby}'] = ['${2:"}', '$2']
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
@@ -316,6 +392,7 @@ children:
   displayName: project_template
   expansion: "project_template '${1:name}' do |t|\n  t.type = :${2:name}\n  t.location\
     \ = '${3:relative_filename.zip}'\n  t.description = '${4:description}'\nend"
+  input: [none]
   inputPath: null
   keyBindingMap: null
   outputPath: null
