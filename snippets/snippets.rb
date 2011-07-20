@@ -3,7 +3,7 @@ require 'ruble'
 with_defaults :scope => 'source.ruby' do
 
   # Snippet to generate a snippet
-  snippet 'snippet' do |s|
+  snippet 'Snippet' do |s|
     s.trigger = 'sn'
     s.expansion = 
 "snippet '${1:name}' do |s|
@@ -14,21 +14,21 @@ end"
   end
 
   # Snippet to repeatedly insert menu command items
-  snippet 'm.command' do |s|
+  snippet 'Menu Command' do |s|
     s.trigger = 'm.'
     s.expansion = "m.command '${1:command_or_snippet_name}'
 m.$0"
   end
 
   # Insert a menu separator
-  snippet 'm.separator' do |s|
+  snippet 'Menu Separator' do |s|
     s.trigger = 'm.'
     s.expansion = "m.separator
 m.$0"
   end
 
 # Generate a sub-menu
-  snippet 'm.menu' do |s|
+  snippet 'Menu Block' do |s|
     s.trigger = 'm.'
     s.expansion = "m.menu '${1:submenu}' do |m|
   m.$0
@@ -36,7 +36,7 @@ end"
   end
 
   # Snippet to generate a command
-  snippet 'command' do |s|
+  snippet 'Command' do |s|
     s.trigger = 'co'
     s.expansion = 
 "require 'ruble'
@@ -55,7 +55,7 @@ end"
   end
   
   # Snippet to generate a bundle
-  command 'bundle' do |s|
+  command 'Bundle.rb' do |s|
     s.trigger = 'bu'
     s.input = :none
     s.output = :insert_as_snippet
@@ -85,7 +85,7 @@ end"
   end
 
   # Snippet to generate a content assistant
-  snippet 'content_assist' do |s|
+  snippet 'Content Assist Block' do |s|
     s.trigger = 'ca'
     s.expansion = 
 "require 'ruble'
@@ -104,7 +104,7 @@ end"
   end
   
   # Snippet to generate with_defaults
-  snippet 'with_defaults' do |s|
+  snippet 'With Defaults Block' do |s|
     s.trigger = 'wi'
     s.expansion = 
 "with_defaults :${1:scope} => '${2:source.ruby}' do
@@ -112,7 +112,7 @@ end"
 end"  
   end
   
-  snippet 'env' do |s|
+  snippet 'Environment' do |s|
     s.trigger = 'env'
     s.expansion=
 "env '${1:source.ruby}' do |e|
@@ -120,17 +120,29 @@ end"
 end"
   end
 
-  snippet 'smart_typing_pairs' do |s|
+  snippet 'Smart Typing Pairs Definition' do |s|
     s.trigger = 'stp'
     s.expansion = "smart_typing_pairs['${1:source.ruby}'] = ['${2:\"}', '$2']"
   end
   
-  snippet 'project_template' do |s|
+  snippet 'File Template' do |s|
+    s.trigger = 'ft'
+    s.expansion = "template '${1:name}' do |t|
+  t.filetype = \"*.${2:txt}\"
+  t.invoke do |context|
+    raw_contents = IO.read(\"#\{ENV['TM_BUNDLE_PATH']\}/templates/${3:template.txt}\")
+    raw_contents.gsub(/\\$\{([^}]*)\}/) {|match| ENV[match[2..-2]] }
+  end
+end"
+  end
+  
+  snippet 'Project Template' do |s|
     s.trigger = 'pt'
     s.expansion = "project_template '${1:name}' do |t|
   t.type = :${2:name}
-  t.location = '${3:relative_filename.zip}'
+  t.location = '${3:relative_path_and_filename.zip}'
   t.description = '${4:description}'
+  t.replace_parameters = false
 end"
   end
 end

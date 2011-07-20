@@ -17,13 +17,30 @@ bundle do |bundle|
     menu.separator
     menu.command "Install Bundle"
     menu.command "Update User Bundles"
-    menu.command "Convert TextMate Bundle" if Ruble.is_mac?
     menu.command "Flush Bundle Caches"
     menu.separator
     menu.command "Show Command Bindings"
     menu.command "Show Active Commands in Scope"
     menu.command "Show Active Snippets in Scope"
+    menu.separator
+    menu.menu "Insert Bundle Section" do |ruble_menu|
+        ruble_menu.command 'Bundle.rb'
+        ruble_menu.separator
+        ruble_menu.command 'Menu Command'
+        ruble_menu.command 'Menu Separator'
+        ruble_menu.command 'Menu Block'
+        ruble_menu.separator
+        ruble_menu.command 'Command'
+        ruble_menu.command 'Snippet'
+        ruble_menu.separator
+        ruble_menu.command 'Content Assist Block'
+        ruble_menu.command 'With Defaults Block'
+        ruble_menu.command 'Environment'
+        ruble_menu.command 'Smart Typing Pairs Definition'
+        ruble_menu.separator
+        ruble_menu.command 'File Template'
+        ruble_menu.command 'Project Template'
+    end
+    menu.command "Convert TextMate Bundle" if Ruble.is_mac?
   end
-  
 end
-

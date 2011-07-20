@@ -1,0 +1,4 @@
+Sample Variables:
+* \${TM_NEW_FILE_BASENAME}: The file name, without the file-extension
+* \${TM_NEW_FILE}: The absolute path to the current file
+* \${TM_NEW_FILE_DIRECTORY}: The directory path for the current file
