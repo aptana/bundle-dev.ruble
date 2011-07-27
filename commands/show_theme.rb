@@ -16,7 +16,7 @@ command "Show Scope and Matching Theme Rule" do |cmd|
     matching_selector = com.aptana.scope.ScopeSelector.bestMatch(selectors, scope)
     matching_rule = rules.find {|rule| rule.getScopeSelector.equals(matching_selector) }
     
-    "Scope: #{scope}\nRule: #{matching_rule.toString()}"
+    "Scope: #{scope}\nRule: #{matching_rule.to_s}"
   end
 end
 
