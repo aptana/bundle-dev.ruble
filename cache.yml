@@ -1,147 +1,6 @@
 !!com.aptana.scripting.model.BundleElement
 author: Christopher Williams, Andrew Shebanow
 children:
-- !command
-  async: false
-  customProperties: null
-  displayName: Show Active Commands in Scope
-  input: []
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: create_new_document
-  path: commands/active_scope_commands.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !command
-  async: false
-  customProperties: null
-  displayName: Show Active Snippets in Scope
-  input: []
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: create_new_document
-  path: commands/active_scope_snippets.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !command
-  async: false
-  customProperties: null
-  displayName: Show Command Bindings
-  input: []
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: create_new_document
-  path: commands/command_bindings.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !command
-  async: false
-  customProperties: null
-  displayName: Convert TextMate Bundle
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: show_as_tooltip
-  path: commands/convert_bundle.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !command
-  async: false
-  customProperties: null
-  displayName: Copy Scope
-  input: [none]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+COMMAND+C]
-  outputPath: null
-  outputType: copy_to_clipboard
-  path: commands/copy_scope.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !command
-  async: false
-  customProperties: null
-  displayName: Show ENV
-  input: [none]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+E]
-  outputPath: null
-  outputType: show_as_tooltip
-  path: commands/env.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !command
-  async: false
-  customProperties: null
-  displayName: Flush Bundle Caches
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: show_as_tooltip
-  path: commands/flush_cache.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !command
-  async: false
-  customProperties: null
-  displayName: Install Bundle
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: undefined
-  path: commands/install_bundle.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !command
-  async: false
-  customProperties: null
-  displayName: Show Scope
-  input: [none]
-  inputPath: null
-  keyBindingMap:
-    !!com.aptana.scripting.model.Platform 'ALL': [CONTROL+SHIFT+P]
-  outputPath: null
-  outputType: show_as_tooltip
-  path: commands/show_scope.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !command
-  async: false
-  customProperties: null
-  displayName: Update User Bundles
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: show_as_tooltip
-  path: commands/update.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.ProjectTemplateElement
-  customProperties: {replace_parameters: true}
-  description: A simple Ruble sample
-  displayName: Ruble Template
-  location: templates/ruble_template.zip
-  path: templates/template.rb
-  scope: null
-  type: RUBY
 - !!com.aptana.scripting.model.MenuElement
   children:
   - children: &id001 []
@@ -149,202 +8,208 @@ children:
     customProperties: null
     displayName: Show Scope
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: Copy Scope
     customProperties: null
     displayName: Copy Scope
     path: bundle.rb
-    scope: source.ruby
+    scope: null
+  - children: *id001
+    commandName: Show Scope and Matching Theme Rule
+    customProperties: null
+    displayName: Show Scope and Matching Theme Rule
+    path: bundle.rb
+    scope: null
   - children: *id001
     commandName: '-'
     customProperties: null
     displayName: '-'
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: Show ENV
     customProperties: null
     displayName: Show ENV
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: '-'
     customProperties: null
     displayName: '-'
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: Install Bundle
     customProperties: null
     displayName: Install Bundle
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: Update User Bundles
     customProperties: null
     displayName: Update User Bundles
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: Flush Bundle Caches
     customProperties: null
     displayName: Flush Bundle Caches
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: '-'
     customProperties: null
     displayName: '-'
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: Show Command Bindings
     customProperties: null
     displayName: Show Command Bindings
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: Show Active Commands in Scope
     customProperties: null
     displayName: Show Active Commands in Scope
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: Show Active Snippets in Scope
     customProperties: null
     displayName: Show Active Snippets in Scope
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: '-'
     customProperties: null
     displayName: '-'
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children:
     - children: *id001
       commandName: Bundle.rb
       customProperties: null
       displayName: Bundle.rb
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: '-'
       customProperties: null
       displayName: '-'
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: Menu Command
       customProperties: null
       displayName: Menu Command
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: Menu Separator
       customProperties: null
       displayName: Menu Separator
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: Menu Block
       customProperties: null
       displayName: Menu Block
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: '-'
       customProperties: null
       displayName: '-'
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: Command
       customProperties: null
       displayName: Command
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: Snippet
       customProperties: null
       displayName: Snippet
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: '-'
       customProperties: null
       displayName: '-'
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: Content Assist Block
       customProperties: null
       displayName: Content Assist Block
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: With Defaults Block
       customProperties: null
       displayName: With Defaults Block
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: Environment
       customProperties: null
       displayName: Environment
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: Smart Typing Pairs Definition
       customProperties: null
       displayName: Smart Typing Pairs Definition
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: '-'
       customProperties: null
       displayName: '-'
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: File Template
       customProperties: null
       displayName: File Template
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     - children: *id001
       commandName: Project Template
       customProperties: null
       displayName: Project Template
       path: bundle.rb
-      scope: source.ruby
+      scope: null
     commandName: Insert Bundle Section
     customProperties: null
     displayName: Insert Bundle Section
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   - children: *id001
     commandName: Convert TextMate Bundle
     customProperties: null
     displayName: Convert TextMate Bundle
     path: bundle.rb
-    scope: source.ruby
+    scope: null
   commandName: Bundle Development
   customProperties: null
   displayName: Bundle Development
   path: bundle.rb
-  scope: source.ruby
+  scope: null
 copyright: (C) Copyright 2010 Aptana Inc. Distributed under the MIT license.
 customProperties: null
-decreaseIndentMarkers: {}
-description: A quick and dirty bundle to make it easier to update your other bundles.
+decreaseIndentMarkers: &id002 {}
+description: A bundle to help develop your own bundles, grab 3rd-party bundles, convert Textnate bundles, and see scope/theme information.
 displayName: Bundle Development
-fileTypeRegistry: {}
-fileTypes: []
-foldingStartMarkers: {}
-foldingStopMarkers: {}
-increaseIndentMarkers: {}
+fileTypeRegistry: *id002
+fileTypes: *id001
+foldingStartMarkers: *id002
+foldingStopMarkers: *id002
+increaseIndentMarkers: *id002
 license: null
 licenseUrl: null
 path: bundle.rb
