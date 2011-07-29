@@ -200,7 +200,7 @@ children:
   displayName: Bundle Development
   path: bundle.rb
   scope: null
-copyright: (C) Copyright 2010 Aptana Inc. Distributed under the MIT license.
+copyright: (C) Copyright 2011 Appcelerator Inc. Distributed under the MIT license.
 customProperties: null
 decreaseIndentMarkers: &id002 {}
 description: A bundle to help develop your own bundles, grab 3rd-party bundles, convert Textnate bundles, and see scope/theme information.
