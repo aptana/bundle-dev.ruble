@@ -357,6 +357,19 @@ children:
   path: templates/template.rb
   scope: null
   type: RUBY
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Validate Snippets
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: create_new_document
+  path: commands/validate_snippets.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 - !!com.aptana.scripting.model.MenuElement
   children:
   - children: &id001 []
@@ -543,6 +556,18 @@ children:
     commandName: Insert Bundle Section
     customProperties: null
     displayName: Insert Bundle Section
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: '-'
+    customProperties: null
+    displayName: '-'
+    path: bundle.rb
+    scope: null
+  - children: *id001
+    commandName: Validate Snippets
+    customProperties: null
+    displayName: Validate Snippets
     path: bundle.rb
     scope: null
   - children: *id001
