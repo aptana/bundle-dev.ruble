@@ -42,6 +42,8 @@ bundle do |bundle|
         ruble_menu.command 'File Template'
         ruble_menu.command 'Project Template'
     end
+    menu.separator
+    menu.command "Validate Snippets"
     menu.command "Convert TextMate Bundle" if Ruble.is_mac?
   end
 end
