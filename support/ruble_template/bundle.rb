@@ -17,7 +17,7 @@ END
   # Use Commands > Bundle Development > Insert Bundle Section > Menu
   # to easily add new sections
   bundle.menu '${TM_PROJECTNAME}' do |menu|
-    menu.command 'Sample Command'
+    menu.command 'Swap Case'
     menu.command 'Sample Snippet'
     menu.separator
     menu.menu 'Sub Menu' do |sub_menu|
