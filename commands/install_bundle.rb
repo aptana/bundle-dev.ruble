@@ -5,7 +5,7 @@ require 'ruble/project'
 RubleInfo = Struct.new(:display_name, :directory_name, :repository)
 INSTALLABLE_RUBLES = [
   RubleInfo.new("JQuery",        "javascript-jquery.ruble",   "git://github.com/aptana/javascript-jquery.ruble.git"),
-  RubleInfo.new("CSScaffold",    "Scaffold.ruble",            "http://github.com/brianegan/Scaffold.ruble.git"),
+  RubleInfo.new("CSScaffold",    "Scaffold.ruble",            "git://github.com/brianegan/Scaffold.ruble.git"),
   RubleInfo.new("GitHub",        "github.ruble",              "git://github.com/aptana/github.ruble.git"),
   RubleInfo.new("Shell Script",  "shell-script.ruble",        "git://github.com/aptana/shell-script.ruble.git"),
   RubleInfo.new("WebFont",       "WebFont.ruble",             "git://github.com/aptana/WebFont.ruble.git"),
@@ -15,6 +15,7 @@ INSTALLABLE_RUBLES = [
   RubleInfo.new("RSense",        "rsense.ruble",              "git://github.com/aptana/rsense.ruble.git"),
   RubleInfo.new("Boxee",         "boxee.ruble",               "git://github.com/sgtcoolguy/boxee.ruble.git"),
   RubleInfo.new("Bundler",       "bundler.ruble",             "git://github.com/aptana/bundler.ruble.git"),
+  RubleInfo.new("Play Framework","play.ruble",                "git://github.com/garbagetown/play.ruble.git"),
   RubleInfo.new("Zen Coding",    "zen-coding.ruble",          "git://github.com/aptana/zen-coding.ruble.git")
 ]
 
