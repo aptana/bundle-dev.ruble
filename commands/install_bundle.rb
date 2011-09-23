@@ -4,19 +4,21 @@ require 'ruble/project'
 # HEY! Want your Ruble included here? Send us a pull request on github!
 RubleInfo = Struct.new(:display_name, :directory_name, :repository)
 INSTALLABLE_RUBLES = [
-  RubleInfo.new("JQuery",        "javascript-jquery.ruble",   "git://github.com/aptana/javascript-jquery.ruble.git"),
-  RubleInfo.new("CSScaffold",    "Scaffold.ruble",            "git://github.com/brianegan/Scaffold.ruble.git"),
-  RubleInfo.new("GitHub",        "github.ruble",              "git://github.com/aptana/github.ruble.git"),
-  RubleInfo.new("Shell Script",  "shell-script.ruble",        "git://github.com/aptana/shell-script.ruble.git"),
-  RubleInfo.new("WebFont",       "WebFont.ruble",             "git://github.com/aptana/WebFont.ruble.git"),
-  RubleInfo.new("Drupal",        "Drupal.ruble",              "git://github.com/arcaneadam/Drupal-Bundle-for-Aptana.git"),
-  RubleInfo.new("Wordpress",     "Wordpress.ruble",           "git://github.com/aptana/wordpress.ruble.git"),
-  RubleInfo.new("Mercurial",     "mercurial.ruble",           "git://github.com/aptana/mercurial.ruble.git"),
-  RubleInfo.new("RSense",        "rsense.ruble",              "git://github.com/aptana/rsense.ruble.git"),
-  RubleInfo.new("Boxee",         "boxee.ruble",               "git://github.com/sgtcoolguy/boxee.ruble.git"),
-  RubleInfo.new("Bundler",       "bundler.ruble",             "git://github.com/aptana/bundler.ruble.git"),
-  RubleInfo.new("Play Framework","play.ruble",                "git://github.com/garbagetown/play.ruble.git"),
-  RubleInfo.new("Zen Coding",    "zen-coding.ruble",          "git://github.com/aptana/zen-coding.ruble.git")
+  RubleInfo.new("JQuery",           "javascript-jquery.ruble",   "git://github.com/aptana/javascript-jquery.ruble.git"),
+  RubleInfo.new("CSScaffold",       "Scaffold.ruble",            "git://github.com/brianegan/Scaffold.ruble.git"),
+  RubleInfo.new("GitHub",           "github.ruble",              "git://github.com/aptana/github.ruble.git"),
+  RubleInfo.new("Shell Script",     "shell-script.ruble",        "git://github.com/aptana/shell-script.ruble.git"),
+  RubleInfo.new("WebFont",          "WebFont.ruble",             "git://github.com/aptana/WebFont.ruble.git"),
+  RubleInfo.new("Drupal",           "Drupal.ruble",              "git://github.com/arcaneadam/Drupal-Bundle-for-Aptana.git"),
+  RubleInfo.new("Wordpress",        "Wordpress.ruble",           "git://github.com/aptana/wordpress.ruble.git"),
+  RubleInfo.new("Mercurial",        "mercurial.ruble",           "git://github.com/aptana/mercurial.ruble.git"),
+  RubleInfo.new("RSense",           "rsense.ruble",              "git://github.com/aptana/rsense.ruble.git"),
+  RubleInfo.new("Boxee",            "boxee.ruble",               "git://github.com/sgtcoolguy/boxee.ruble.git"),
+  RubleInfo.new("Bundler",          "bundler.ruble",             "git://github.com/aptana/bundler.ruble.git"),
+  RubleInfo.new("Play Framework",   "play.ruble",                "git://github.com/garbagetown/play.ruble.git"),
+  RubleInfo.new("Titanium Desktop", "titanium_desktop.ruble",    "git@github.com:appcelerator/titanium_desktop.ruble.git"),
+  RubleInfo.new("Titanium Mobile",  "titanium_mobile.ruble",     "git@github.com:appcelerator/titanium_mobile.ruble.git"),
+  RubleInfo.new("Zen Coding",       "zen-coding.ruble",          "git://github.com/aptana/zen-coding.ruble.git")
 ]
 
 # This asks the user which of the known bundles they would like to install
