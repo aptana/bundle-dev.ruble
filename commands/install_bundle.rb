@@ -16,8 +16,8 @@ INSTALLABLE_RUBLES = [
   RubleInfo.new("Boxee",            "boxee.ruble",               "git://github.com/sgtcoolguy/boxee.ruble.git"),
   RubleInfo.new("Bundler",          "bundler.ruble",             "git://github.com/aptana/bundler.ruble.git"),
   RubleInfo.new("Play Framework",   "play.ruble",                "git://github.com/garbagetown/play.ruble.git"),
-  RubleInfo.new("Titanium Desktop", "titanium_desktop.ruble",    "git@github.com:appcelerator/titanium_desktop.ruble.git"),
-  RubleInfo.new("Titanium Mobile",  "titanium_mobile.ruble",     "git@github.com:appcelerator/titanium_mobile.ruble.git"),
+  RubleInfo.new("Titanium Desktop", "titanium_desktop.ruble",    "git://github.com/appcelerator/titanium_desktop.ruble.git"),
+  RubleInfo.new("Titanium Mobile",  "titanium_mobile.ruble",     "git://github.com/appcelerator/titanium_mobile.ruble.git"),
   RubleInfo.new("Zen Coding",       "zen-coding.ruble",          "git://github.com/aptana/zen-coding.ruble.git")
 ]
 
