@@ -11,7 +11,7 @@ command 'Show Active Snippets in Scope' do |cmd|
     
     by_triggers = {}
     commands.each do |c|
-      triggers = c.triggers
+      triggers = c.getTriggerTypeValues(com.aptana.scripting.model.TriggerType::PREFIX)
       next if triggers.length == 0
       triggers.each do |t|
         existing = by_triggers[t] || []
