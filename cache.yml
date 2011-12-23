@@ -577,6 +577,8 @@ children:
   customProperties: {replace_parameters: true}
   description: A simple Ruble sample
   displayName: Ruble Template
+  icon: null
+  id: Ruble Template
   location: templates/ruble_template.zip
   path: templates/template.rb
   scope: null
