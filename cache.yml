@@ -349,19 +349,6 @@ children:
 - !!com.aptana.scripting.model.CommandElement
   async: false
   customProperties: null
-  displayName: Update User Bundles
-  input: [none]
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: show_as_tooltip
-  path: commands/update.rb
-  runType: current_thread
-  scope: null
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
-  async: false
-  customProperties: null
   displayName: Validate Snippets
   input: [none]
   inputPath: null
@@ -577,10 +564,25 @@ children:
   customProperties: {replace_parameters: true}
   description: A simple Ruble sample
   displayName: Ruble Template
+  icon: null
+  id: Ruble Template
   location: templates/ruble_template.zip
   path: templates/template.rb
   scope: null
   type: RUBY
+- !!com.aptana.scripting.model.CommandElement
+  async: false
+  customProperties: null
+  displayName: Update User Bundles
+  input: [none]
+  inputPath: null
+  keyBindingMap: null
+  outputPath: null
+  outputType: discard
+  path: commands/update.rb
+  runType: current_thread
+  scope: null
+  workingDirectoryType: UNDEFINED
 copyright: (C) Copyright 2011 Appcelerator Inc. Distributed under the MIT license.
 customProperties: null
 decreaseIndentMarkers: &id002 {}
