@@ -2,7 +2,7 @@ require 'ruble'
 
 # Delete all the cache.yml files in the bundles. They'll be re-generated
 # on next restart.
-command "Flush Bundle Caches" do |cmd|
+command t(:flush_caches) do |cmd|
   cmd.input = :none
   cmd.output = :show_as_tooltip
   cmd.invoke do

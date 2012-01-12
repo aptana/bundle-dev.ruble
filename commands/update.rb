@@ -4,11 +4,11 @@ require 'ruble/progress'
 # This command luanches a job to update the bundle async, so we don't block the IDE.
 # We provide progress in the job as we go on the IProgressMonitor
 # We also spit out the resulting output of the operations to the scripting console
-command "Update User Bundles" do |cmd|
+command t(:update_bundles) do |cmd|
   cmd.input = :none
   cmd.output = :discard
   cmd.invoke do |context|
-    job = Ruble::Job.new("Updating user bundles...") do |monitor|
+    job = Ruble::Job.new(t(:updating_user_bundles_title)) do |monitor|
       initial_log_level = Ruble::Logger.log_level
       Ruble::Logger.log_level = :info
 
@@ -19,12 +19,12 @@ command "Update User Bundles" do |cmd|
       ruble_dirs = Dir.glob("*.ruble")
 
       unless monitor.isCanceled
-        monitor.beginTask("Updating rubles", ruble_dirs.size)
+        monitor.beginTask(t(:updating_rubles), ruble_dirs.size)
 
         ruble_dirs.each do |filename|
           next if monitor.isCanceled
 
-          monitor.subTask("Updating #{filename}")
+          monitor.subTask(t(:updating_ruble_filename, :filename => filename))
           bundle_dir = File.join(bundles_dir, filename)
           bundle_dir = File.readlink(bundle_dir) if File.symlink?(bundle_dir)
           Dir.chdir(bundle_dir) do |dir|

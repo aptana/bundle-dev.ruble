@@ -1,7 +1,7 @@
 require 'ruble'
 
 # Show the rule which 'won' to color this token
-command "Show Scope and Matching Theme Rule" do |cmd|
+command t(:show_scope_and_theme_rule) do |cmd|
   cmd.key_binding = "M1+M3+P"
   cmd.input = :none
   cmd.output = :show_as_tooltip

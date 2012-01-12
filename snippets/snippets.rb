@@ -3,7 +3,7 @@ require 'ruble'
 with_defaults :scope => 'source.ruby' do
 
   # Snippet to generate a snippet
-  snippet 'Snippet' do |s|
+  snippet t(:snippet) do |s|
     s.trigger = 'sn'
     s.expansion = 
 "snippet '${1:name}' do |s|
@@ -14,21 +14,21 @@ end"
   end
 
   # Snippet to repeatedly insert menu command items
-  snippet 'Menu Command' do |s|
+  snippet t(:menu_command) do |s|
     s.trigger = 'm.'
     s.expansion = "m.command '${1:command_or_snippet_name}'
 m.$0"
   end
 
   # Insert a menu separator
-  snippet 'Menu Separator' do |s|
+  snippet t(:menu_separator) do |s|
     s.trigger = 'm.'
     s.expansion = "m.separator
 m.$0"
   end
 
 # Generate a sub-menu
-  snippet 'Menu Block' do |s|
+  snippet t(:menu_block) do |s|
     s.trigger = 'm.'
     s.expansion = "m.menu '${1:submenu}' do |m|
   m.$0
@@ -36,7 +36,7 @@ end"
   end
 
   # Snippet to generate a command
-  snippet 'Command' do |s|
+  snippet t(:command) do |s|
     s.trigger = 'co'
     s.expansion = 
 "require 'ruble'
@@ -55,7 +55,7 @@ end"
   end
   
   # Snippet to generate a bundle
-  command 'Bundle.rb' do |s|
+  command t(:bundle_rb) do |s|
     s.trigger = 'bu'
     s.input = :none
     s.output = :insert_as_snippet
@@ -85,7 +85,7 @@ end"
   end
 
   # Snippet to generate a content assistant
-  snippet 'Content Assist Block' do |s|
+  snippet t(:content_assist) do |s|
     s.trigger = 'ca'
     s.expansion = 
 "require 'ruble'
@@ -104,7 +104,7 @@ end"
   end
   
   # Snippet to generate with_defaults
-  snippet 'With Defaults Block' do |s|
+  snippet t(:with_defaults) do |s|
     s.trigger = 'wi'
     s.expansion = 
 "with_defaults :${1:scope} => '${2:source.ruby}' do
@@ -112,7 +112,7 @@ end"
 end"  
   end
   
-  snippet 'Environment' do |s|
+  snippet t(:environment) do |s|
     s.trigger = 'env'
     s.expansion=
 "env '${1:source.ruby}' do |e|
@@ -120,12 +120,12 @@ end"
 end"
   end
 
-  snippet 'Smart Typing Pairs Definition' do |s|
+  snippet t(:smart_typing_pairs) do |s|
     s.trigger = 'stp'
     s.expansion = "smart_typing_pairs['${1:source.ruby}'] = ['${2:\"}', '$2']"
   end
   
-  snippet 'File Template' do |s|
+  snippet t(:file_template) do |s|
     s.trigger = 'ft'
     s.expansion = "template '${1:name}' do |t|
   t.filetype = \"*.${2:txt}\"
@@ -136,7 +136,7 @@ end"
 end"
   end
   
-  snippet 'Project Template' do |s|
+  snippet t(:project_template) do |s|
     s.trigger = 'pt'
     s.expansion = "project_template '${1:name}' do |t|
   t.type = :${2:name}

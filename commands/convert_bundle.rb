@@ -3,7 +3,7 @@ require 'ruble/project'
 require 'ruble/platform'
 
 if Ruble.is_mac?
-  command "Convert TextMate Bundle" do |cmd|
+  command t(:convert_bundle) do |cmd|
     cmd.input = :none
     cmd.output = :show_as_tooltip
     cmd.invoke do |context|

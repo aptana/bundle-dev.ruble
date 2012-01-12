@@ -1,6 +1,6 @@
 require 'ruble'
 
-command "Validate Snippets" do |cmd|
+command t(:validate_snippets) do |cmd|
   cmd.input = :none
   cmd.output = :create_new_document
   cmd.invoke do

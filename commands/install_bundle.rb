@@ -22,7 +22,7 @@ INSTALLABLE_RUBLES = [
 ]
 
 # This asks the user which of the known bundles they would like to install
-command "Install Bundle" do |cmd|
+command t(:install_bundle) do |cmd|
   cmd.input = :none
   cmd.output = :none
   cmd.invoke do |context|
