@@ -2,7 +2,7 @@ require 'ruble'
 #require 'ruble/project'
 
 # HEY! Want your Ruble included here? Send us a pull request on github!
-RubleInfo = Struct.new(:display_name, :directory_name, :repository)
+RubleInfo = Struct.new(:display_name, :directory_name, :repository) unless defined?(RubleInfo)
 INSTALLABLE_RUBLES = [
   RubleInfo.new("Boxee",            "boxee.ruble",               "git://github.com/sgtcoolguy/boxee.ruble.git"),
   RubleInfo.new("Bundler",          "bundler.ruble",             "git://github.com/aptana/bundler.ruble.git"),
@@ -19,7 +19,7 @@ INSTALLABLE_RUBLES = [
   RubleInfo.new("WebFont",          "WebFont.ruble",             "git://github.com/aptana/WebFont.ruble.git"),
   RubleInfo.new("Wordpress",        "Wordpress.ruble",           "git://github.com/aptana/wordpress.ruble.git"),
   RubleInfo.new("Zen Coding",       "zen-coding.ruble",          "git://github.com/aptana/zen-coding.ruble.git")
-]
+] unless defined?(INSTALLABLE_RUBLES)
 
 # This asks the user which of the known bundles they would like to install
 command t(:install_bundle) do |cmd|
