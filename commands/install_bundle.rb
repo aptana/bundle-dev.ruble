@@ -1,8 +1,7 @@
 require 'ruble'
-#require 'ruble/project'
 
 # HEY! Want your Ruble included here? Send us a pull request on github!
-RubleInfo = Struct.new(:display_name, :directory_name, :repository)
+RubleInfo = Struct.new(:display_name, :directory_name, :repository) unless defined?(RubleInfo)
 INSTALLABLE_RUBLES = [
   RubleInfo.new("Boxee",            "boxee.ruble",               "git://github.com/sgtcoolguy/boxee.ruble.git"),
   RubleInfo.new("Bundler",          "bundler.ruble",             "git://github.com/aptana/bundler.ruble.git"),
@@ -19,10 +18,10 @@ INSTALLABLE_RUBLES = [
   RubleInfo.new("WebFont",          "WebFont.ruble",             "git://github.com/aptana/WebFont.ruble.git"),
   RubleInfo.new("Wordpress",        "Wordpress.ruble",           "git://github.com/aptana/wordpress.ruble.git"),
   RubleInfo.new("Zen Coding",       "zen-coding.ruble",          "git://github.com/aptana/zen-coding.ruble.git")
-]
+] unless defined?(INSTALLABLE_RUBLES)
 
 # This asks the user which of the known bundles they would like to install
-command "Install Bundle" do |cmd|
+command t(:install_bundle) do |cmd|
   cmd.input = :none
   cmd.output = :none
   cmd.invoke do |context|
@@ -36,17 +35,17 @@ command "Install Bundle" do |cmd|
     options = {}
     options[:items] = uninstalled_rubles
     if uninstalled_rubles.length == 1
-      options[:button1]= "Install"
-      options[:title] = "Install Bundle"
-      options[:prompt] = "Install #{items.first} Bundle?"
+      options[:button1]= t(:install)
+      options[:title] = t(:install_bundle)
+      options[:prompt] = t(:install_0_bundle, :bundle_name =>items.first)
       chosen = Ruble::UI.request_confirmation(options) ? uninstalled_rubles.first : nil
     elsif uninstalled_rubles.length == 0
-      context.exit_show_tool_tip("There are no bundles to install.")
+      context.exit_show_tool_tip(t(:no_bundles_to_install))
     else
-      options[:title] = "Select Bundle to Install"
+      options[:title] = t(:select_bundle_to_install)
       chosen = Ruble::UI.request_item(options)
     end
-    context.exit_show_tool_tip("No Bundle selected") if chosen.nil?
+    context.exit_show_tool_tip(t(:no_bundle_selected)) if chosen.nil?
       
     chosen_ruble = INSTALLABLE_RUBLES.select {|r| r.display_name == chosen}.first
     

@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Show Command Bindings' do |cmd|
+command t(:show_bindings) do |cmd|
   cmd.output = :create_new_document
   cmd.scope = :all
   cmd.invoke do |context|

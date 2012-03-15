@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Show Active Commands in Scope' do |cmd|
+command t(:show_active_commands) do |cmd|
   cmd.output = :create_new_document
   cmd.scope = :all
   cmd.invoke do |context|

@@ -1,8 +1,8 @@
 require 'ruble'
 
-project_template "Ruble Template" do |t|
+project_template t(:ruble_template) do |t|
   t.type = :ruby
   t.location = "templates/ruble_template.zip"
-  t.description = "A simple Ruble sample"
+  t.description = t(:ruble_template_description)
   t.replace_parameters = true
 end
