@@ -15,12 +15,14 @@ command t(:flush_caches) do |cmd|
       bundle_dir = File.join(bundles_dir, filename)
       bundle_dir = File.readlink(bundle_dir) if File.symlink?(bundle_dir)
       Dir.chdir(bundle_dir) do |dir|
-        cache_file = File.join(Dir.pwd, 'cache.yml')
-        begin
-          File.delete(cache_file)
-          str << "Deleted: #{cache_file}\n"
-        rescue
-          # ignore?
+        Dir.glob("cache*.yml").each do |cache_filename|
+          cache_file = File.join(Dir.pwd, cache_filename)
+          begin
+            File.delete(cache_file)
+            str << t(:deleted_0, :cache_file => cache_file)
+          rescue
+            # ignore?
+          end
         end
       end
     end

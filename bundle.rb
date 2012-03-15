@@ -1,11 +1,10 @@
 require 'ruble'
-require 'ruble/platform'
 
 bundle do |bundle|
   bundle.author = "Christopher Williams, Andrew Shebanow"
   bundle.copyright = '(C) Copyright 2011 Appcelerator Inc. Distributed under the MIT license.'
-  bundle.display_name = 'Bundle Development'
-  bundle.description = "A bundle to help develop your own bundles, grab 3rd-party bundles, convert TextMate bundles, and see scope/theme information."
+  bundle.display_name = t(:toplevel_menu)
+  bundle.description = t(:bundle_description)
   bundle.repository = 'git://github.com/aptana/bundle-dev.ruble.git'
 
   # This command should show regardless of scope, so we don't define one.

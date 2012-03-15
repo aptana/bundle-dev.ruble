@@ -1,5 +1,6 @@
 en:
   toplevel_menu: "Bundle Development"
+  bundle_description: "A bundle to help develop your own bundles, grab 3rd-party bundles, convert TextMate bundles, and see scope/theme information."
   show_scope: "Show Scope"
   copy_scope: "Copy Scope"
   show_scope_and_theme_rule: "Show Scope and Matching Theme Rule"
@@ -28,3 +29,18 @@ en:
   updating_user_bundles_title: "Updating user bundles..."
   updating_rubles: "Updating rubles"
   updating_ruble_filename: "Updating %{filename}"
+  ruble_template: "Ruble Template"
+  ruble_template_description: "A simple Ruble sample"
+  snippets_failed_validation: "The following snippets failed validation."
+  bundle_0: "Bundle: %{bundle_path}"
+  no_snippets_failed_validation: "No snippets failed validation"
+  deleted_0: "Deleted: %{cache_file}\n"
+  scope_0_rule_0: "Scope: %{scope}\nRule: %{rule}"
+  select_bundle_to_convert: 'Select bundle to convert'
+  no_bundle_selected: "No bundle selected"
+  bundle_convert_msg: "Please note that this bundle conversion process is really meant as a starting point for converting bundles over to rubles.\nNearly every bundle will need additional work, and often many commands will work better or require less code if converted from shell scripts to in-process ruby (block invocation).\nSee https://radrails.tenderapp.com/faqs/radrails-3/ruble-programming-guide"
+  install: "Install"
+  install_0_bundle: "Install %{bundle_name} Bundle?"
+  no_bundles_to_install: "There are no bundles to install."
+  select_bundle_to_install: "Select Bundle to Install"
+  

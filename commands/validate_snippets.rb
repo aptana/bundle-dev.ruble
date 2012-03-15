@@ -41,13 +41,13 @@ command t(:validate_snippets) do |cmd|
     
     # Spit out failures
     if failures.size > 0
-      puts "The following snippets failed validation."
+      puts t(:snippets_failed_validation)
       failures.each do |bundle_path, fails|
-        puts "Bundle: #{bundle_path}"
+        puts t(:bundle_0, :bundle_path => bundle_path)
         puts "  #{fails.join("\n  ")}\n\n"
       end
     else
-      puts "No snippets failed validation"
+      puts t(:no_snippets_failed_validation)
     end
     nil
   end

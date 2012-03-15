@@ -16,7 +16,7 @@ command t(:show_scope_and_theme_rule) do |cmd|
     matching_selector = com.aptana.scope.ScopeSelector.bestMatch(selectors, scope)
     matching_rule = rules.find {|rule| rule.getScopeSelector.equals(matching_selector) }
     
-    "Scope: #{scope}\nRule: #{matching_rule.to_s}"
+    t(:scope_0_rule_0, :scope => scope, :rule => matching_rule.to_s)
   end
 end
 
