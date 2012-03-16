@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Show Active Snippets in Scope' do |cmd|
+command t(:show_active_snippets) do |cmd|
   cmd.output = :create_new_document
   cmd.scope = :all
   cmd.invoke do |context|

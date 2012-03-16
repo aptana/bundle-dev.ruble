@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Show ENV' do |cmd|
+command t(:show_env) do |cmd|
   cmd.input = :none
   cmd.output = :show_as_tooltip
   cmd.key_binding = "CONTROL+SHIFT+E"
