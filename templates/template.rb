@@ -5,4 +5,5 @@ project_template t(:ruble_template) do |t|
   t.location = "templates/ruble_template.zip"
   t.description = t(:ruble_template_description)
   t.replace_parameters = true
+  t.tags = ['Ruby']
 end
